@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
 
-    axios.get(`https://digimoncard.io/api-public/search.php?n=${digimon}`)
+    axios.get(`https://digimoncard.io/api-public/search.php?n=${digimon}&type=digimon`)
       .then((Response) => {
         console.log(Response.data)
         setData(Response.data)
@@ -40,10 +40,10 @@ function App() {
 
       <div className='container'>
 
-        {data.map((val) => {
+        {data.map((val, index) => {
           return (
-            <div>
-              <img className='img' src={val.image_url} alt='Digimon' />
+            <div key={index}>
+              <img className='img' src={val.image_url} onClick={()=> console.log(val)} alt='Digimon' />
 
             </div>
 
