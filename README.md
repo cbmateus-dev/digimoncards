@@ -12,7 +12,7 @@ O projeto consiste na criação de uma requisição de API que inicialmente reto
 - Axios
 #
 <h1 align="center">
-	<img alt="digimon" src="./src/assets/digiapi.png" width="500px"/>
+	<img alt="digimon" src="./src/assets/digiapi.png" width="900px"/>
 </h1>
 
 #
