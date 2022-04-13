@@ -13,6 +13,10 @@ O projeto consiste na criação de uma requisição de API que inicialmente reto
 #
 <h1 align="center">
 	<img alt="digimon" src="./src/assets/digiapi.png" width="900px"/>
+	
+	#
+	
+	<img alt="digimon1" src="./src/assets/digiapiagumon.png" width="900px"/>
 </h1>
 
 #
