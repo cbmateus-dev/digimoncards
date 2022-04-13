@@ -30,7 +30,7 @@ git clone https://github.com/cbmateus-dev/digimoncards.git
 &&
 ```
 bash
-cd calculadorareact
+cd digimoncards
 ```
 
 
