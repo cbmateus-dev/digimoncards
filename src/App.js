@@ -1,23 +1,57 @@
-import logo from './logo.svg';
+
 import './App.css';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import TextField from '@mui/material/TextField';
+
 
 function App() {
+
+  const [digimon, setDigimon] = useState('')
+  const [data, setData] = useState([])
+
+
+  useEffect(() => {
+
+    axios.get(`https://digimoncard.io/api-public/search.php?n=${digimon}`)
+      .then((Response) => {
+        console.log(Response.data)
+        setData(Response.data)
+
+      })
+  },
+    [digimon]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="App" >
+
+      <h1>Buscar Digimon</h1>
+      <div className='inputb'>
+      
+        <TextField id="filled-basic" label="Digite o Nome" variant="filled" 
+          onBlur={(e) => {
+            setDigimon(e.target.value)
+          }}
+        />
+      </div>
+
+      <h1>Digimons</h1>
+
+      <div className='container'>
+
+        {data.map((val) => {
+          return (
+            <div>
+              <img className='img' src={val.image_url} alt='Digimon' />
+
+            </div>
+
+          )
+        })}
+
+      </div>
+
     </div>
   );
 }
