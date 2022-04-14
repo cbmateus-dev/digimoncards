@@ -1,27 +1,28 @@
-.App{
+.App {
   display: flex;
   flex-direction: column;
   background-image: url(./assets/img/background.png);
   margin-top: -25px;
   background-repeat: repeat-y;
   background-size: contain;
-  
+
 }
-.container{
+
+.container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 
 }
 
-.post{
+.post {
   width: 300px;
   height: 500px;
   margin: 5px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   transition: transform 100ms ease-in-out;
-  
+
 }
 
 .post:hover {
@@ -32,20 +33,19 @@
   max-width: 100%;
 }
 
-h1{
-display: flex;
- justify-content: center;
- padding-top: 50px;
-}
-
-.inputb{
+h1 {
   display: flex;
   justify-content: center;
-  }
+  padding-top: 50px;
+}
 
- #filled-basic{
-   background-color: #fff;
-   border-radius: 5px;
+.inputb {
+  display: flex;
+  justify-content: center;
+}
 
- }
+#filled-basic {
+  background-color: #fff;
+  border-radius: 5px;
 
+}
