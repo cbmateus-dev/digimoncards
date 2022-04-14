@@ -8,20 +8,28 @@
   
 }
 .container{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
 
 }
 
-.img{
+.post{
   width: 300px;
   height: 500px;
   margin: 5px;
-  border: 1px solid #000;
   border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  transition: transform 100ms ease-in-out;
   
+}
+
+.post:hover {
+  transform: scale(1.09);
+}
+
+.post img {
+  max-width: 100%;
 }
 
 h1{
@@ -38,5 +46,6 @@ display: flex;
  #filled-basic{
    background-color: #fff;
    border-radius: 5px;
-   
+
  }
+

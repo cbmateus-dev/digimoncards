@@ -28,8 +28,8 @@ function App() {
 
       <h1>Buscar Digimon</h1>
       <div className='inputb'>
-      
-        <TextField id="filled-basic" label="Digite o Nome" variant="filled" 
+
+        <TextField id="filled-basic" label="Digite o Nome" variant="filled"
           onBlur={(e) => {
             setDigimon(e.target.value)
           }}
@@ -43,8 +43,9 @@ function App() {
         {data.map((val, index) => {
           return (
             <div key={index}>
-              <img className='img' src={val.image_url} onClick={()=> console.log(val)} alt='Digimon' />
-
+              <div >
+                <img className='post' src={val.image_url} onClick={() => console.log(val)} alt='Digimon' />
+              </div>
             </div>
 
           )
