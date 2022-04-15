@@ -10,6 +10,7 @@ O projeto consiste na criação de uma requisição de API que inicialmente reto
 - Hooks
 - Componentes
 - Axios
+- Material UI
 #
 <h1 align="center">
 	<img alt="digimon" src="./src/assets/digiapi.png" width="900px"/>
