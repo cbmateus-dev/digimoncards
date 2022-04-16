@@ -2,7 +2,12 @@
 import './App.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import TextField from '@mui/material/TextField';
+
+import { Search } from './components/Search';
+import { Corpo } from './components/Corpo';
+import { TextField } from '@mui/material';
+
+
 
 
 function App() {
@@ -28,12 +33,12 @@ function App() {
 
       <h1>Buscar Digimon</h1>
       <div className='inputb'>
-
         <TextField id="filled-basic" label="Digite o Nome" variant="filled"
           onBlur={(e) => {
             setDigimon(e.target.value)
           }}
         />
+
       </div>
 
       <h1>Digimons</h1>
@@ -43,11 +48,9 @@ function App() {
         {data.map((val, index) => {
           return (
             <div key={index}>
-              <div >
-                <img className='post' src={val.image_url} onClick={() => console.log(val)} alt='Digimon' />
-              </div>
-            </div>
+              <Corpo val={val} />
 
+            </div>
           )
         })}
 
