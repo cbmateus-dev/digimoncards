@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Search } from './components/Search';
 import { Corpo } from './components/Corpo';
-import { TextField } from '@mui/material';
+
 
 
 
@@ -33,23 +33,19 @@ function App() {
 
       <h1>Buscar Digimon</h1>
       <div className='inputb'>
-        <TextField id="filled-basic" label="Digite o Nome" variant="filled"
-          onBlur={(e) => {
-            setDigimon(e.target.value)
-          }}
-        />
+        <Search  onblur={(e) => {
+          setDigimon(e.target.value)
+        }} />
 
       </div>
 
       <h1>Digimons</h1>
 
       <div className='container'>
-
         {data.map((val, index) => {
           return (
             <div key={index}>
               <Corpo val={val} />
-
             </div>
           )
         })}
