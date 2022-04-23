@@ -1,16 +1,17 @@
 
-import './App.css';
+import './styles.css';
+
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-import { Search } from './components/Search';
-import { Corpo } from './components/Corpo';
+import { Search } from '../../components/Search';
+import { Corpo } from '../../components/Corpo';
 
 
 
 
 
-function App() {
+function Home() {
 
   const [digimon, setDigimon] = useState('')
   const [data, setData] = useState([])
@@ -42,7 +43,7 @@ function App() {
       <h1>Digimons</h1>
 
       <div className='container'>
-        {data.map((val, index) => {
+        {data.slice(0,12).map((val, index) => {
           return (
             <div key={index}>
               <Corpo val={val} />
@@ -56,4 +57,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
