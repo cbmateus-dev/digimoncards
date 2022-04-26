@@ -15,6 +15,12 @@ function Home() {
 
   const [digimon, setDigimon] = useState('')
   const [data, setData] = useState([])
+  const [morepost, setMorePost] = useState('')
+ 
+
+  
+  
+
 
 
   useEffect(() => {
@@ -23,7 +29,8 @@ function Home() {
       .then((Response) => {
         console.log(Response.data)
         setData(Response.data)
-
+        setMorePost(12)
+        
       })
   },
     [digimon]);
@@ -34,7 +41,7 @@ function Home() {
 
       <h1>Buscar Digimon</h1>
       <div className='inputb'>
-        <Search  onblur={(e) => {
+        <Search onblur={(e) => {
           setDigimon(e.target.value)
         }} />
 
@@ -43,7 +50,7 @@ function Home() {
       <h1>Digimons</h1>
 
       <div className='container'>
-        {data.slice(0,12).map((val, index) => {
+        {data.slice(0, morepost).map((val, index) => {
           return (
             <div key={index}>
               <Corpo val={val} />
@@ -52,6 +59,13 @@ function Home() {
         })}
 
       </div>
+      <div>
+        <button onClick={() => {
+          setMorePost(morepost+12)
+
+        }}>Load More Post</button>
+      </div>
+
 
     </div>
   );
